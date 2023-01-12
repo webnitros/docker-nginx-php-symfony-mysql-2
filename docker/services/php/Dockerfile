@@ -32,8 +32,8 @@ RUN curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/5.
     && mv phpredis-5.1.1 /usr/src/php/ext/redis \
     && docker-php-ext-install redis
 
-RUN     pecl install xdebug \
-        && docker-php-ext-enable xdebug
+#RUN     pecl install xdebug \
+#        && docker-php-ext-enable xdebug
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
